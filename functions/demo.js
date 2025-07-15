@@ -18,6 +18,13 @@ export async function onRequest(context) {
     			}
     		}
     	);
+    } else {
+        return new Response('CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN is OK', {
+            status: 200,
+            headers: {
+                'Content-Type': 'text/plain; charset=utf-8',
+            },
+        });
     }
 
 }
